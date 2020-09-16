@@ -16,6 +16,8 @@ public:
     ~cute_window();
 
 private:
+    void btn_Click();
+    void btn_Click2();
     Ui::cutewindow *ui;
 };
 #endif // CUTEWINDOW_H
