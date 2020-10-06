@@ -2,12 +2,15 @@
 #include "ui_cute_window.h"
 #include "qpushbutton.h"
 #include "QDialog"
+#include <QSettings>
 
 cute_window::cute_window(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::cutewindow)
 {
     ui->setupUi(this);
+    readSettings();
+
     QPushButton* btn = new QPushButton(this);
     btn->setText("关闭");
     connect(btn,&QPushButton::clicked, this, &cute_window::btn_Click);
@@ -28,8 +31,24 @@ void cute_window::btn_Click2(){
     dialog->show();
 }
 
+void cute_window::readSettings()
+{
+     QSettings settings(APP_QMAKE_TARGET_COMPANY, APP_QMAKE_TARGET_PRODUCT);
+     QSize defaultSize = size();
+     QSize size = settings.value( "size" , defaultSize).toSize();
+     resize(size);
+}
+
+void cute_window::writeSettings()
+{
+     QSettings settings(APP_QMAKE_TARGET_COMPANY, APP_QMAKE_TARGET_PRODUCT);
+     QSize sizeValue = size();
+     settings.setValue("size" , sizeValue);
+}
+
 cute_window::~cute_window()
 {
+    writeSettings();
     delete ui;
 }
 

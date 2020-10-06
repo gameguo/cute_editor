@@ -18,6 +18,9 @@ public:
 private:
     void btn_Click();
     void btn_Click2();
+    void readSettings();
+    void writeSettings();
+
     Ui::cutewindow *ui;
 };
 #endif // CUTEWINDOW_H
