@@ -7,17 +7,16 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class cutewindow; }
 QT_END_NAMESPACE
 
-class cute_window : public QMainWindow
+class Cute_Window : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    cute_window(QWidget *parent = nullptr);
-    ~cute_window();
+    Cute_Window(QWidget *parent = nullptr);
+    ~Cute_Window();
 
 private:
     void btn_Click();
-    void btn_Click2();
     void readSettings();
     void writeSettings();
 

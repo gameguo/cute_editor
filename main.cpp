@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     do{ now = QDateTime::currentDateTime(); }
     while (n.secsTo(now) <= 2);
 
-    cute_window w;
+    Cute_Window w;
     w.show();
 
     splash.finish(&w); // 完成后自动close
