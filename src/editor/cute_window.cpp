@@ -12,9 +12,9 @@ Cute_Window::Cute_Window(QWidget *parent)
     ui->setupUi(this);
     readSettings();
 
-    QPushButton* btn = new QPushButton(this);
-    btn->setText("弹窗");
-    connect(btn,&QPushButton::clicked, this, &Cute_Window::btn_Click);
+//    QPushButton* btn = new QPushButton(this);
+//    btn->setText("弹窗");
+//    connect(btn,&QPushButton::clicked, this, &Cute_Window::btn_Click);
 }
 
 void Cute_Window::btn_Click(){
