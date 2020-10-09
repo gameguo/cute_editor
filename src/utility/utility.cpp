@@ -22,12 +22,12 @@ void Utility::showMessage(QWidget *parent, const QString &title, const QString& 
     msg.setText(text);
     msg.setStyleSheet("QLabel{min-width:150px;min-height:50px;}");
     msg.exec();
-    //msg.information(parent, title, text, QMessageBox::Ok);
 }
-
 void Utility::showDialog(QWidget *parent)
 {
     auto dialog = new QDialog(parent);
+    dialog->setModal(true);
     dialog->setFixedSize(300,200);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->show();
 }

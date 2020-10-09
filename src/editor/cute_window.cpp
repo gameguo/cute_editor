@@ -2,6 +2,7 @@
 #include "ui_cute_window.h"
 #include "QPushButton"
 #include "QDialog"
+#include <QAction>
 #include <QSettings>
 #include <utility.h>
 
@@ -11,6 +12,14 @@ Cute_Window::Cute_Window(QWidget *parent)
 {
     ui->setupUi(this);
     readSettings();
+
+    //ui->dockWidgetContents->setStyleSheet("");
+
+    QPushButton* btn = new QPushButton(this);
+    btn->setText("弹窗");
+    connect(btn,&QPushButton::clicked,[=](){
+        Utility::showDialog(this);
+    });
 
 //    QPushButton* btn = new QPushButton(this);
 //    btn->setText("弹窗");

@@ -14,10 +14,11 @@ int main(int argc, char *argv[])
     splash.show(); // 显示图片
     a.processEvents(); // 刷新事件循环
     //splash.showMessage("Cute Editor", Qt::AlignCenter, Qt::white);
+
     QDateTime n = QDateTime::currentDateTime();
     QDateTime now;
     do{ now = QDateTime::currentDateTime(); }
-    while (n.secsTo(now) <= 2);
+    while (n.secsTo(now) <= 1);
 
     Cute_Window w;
     w.show();

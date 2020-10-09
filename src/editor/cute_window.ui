@@ -25,158 +25,43 @@
 	background:rgb(36, 39, 48);
 }</string>
    </property>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>9</x>
-      <y>9</y>
-      <width>141</width>
-      <height>441</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <property name="spacing">
-      <number>0</number>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>40</y>
+       <width>561</width>
+       <height>411</height>
+      </rect>
      </property>
-     <property name="sizeConstraint">
-      <enum>QLayout::SetDefaultConstraint</enum>
-     </property>
-     <property name="leftMargin">
-      <number>0</number>
-     </property>
-     <item>
-      <widget class="QRadioButton" name="radioButton">
-       <property name="styleSheet">
-        <string notr="true">QRadioButton {
-	border:0px;
-    font-size: 30px;
-	text-align:center;
-	spacing: -85px;
-    color: rgb(255, 255, 255);
-}
-QRadioButton::indicator {   /* indicator是一个子组件，这里的width和height分别指定按钮的宽和高 */
-	width: 100px;
-	height: 50px;
-}
-QRadioButton::indicator::unchecked {   /* 未选中时状态，也即正常状态 */
-    background: rgb(80, 80, 80);
-}
- 
-QRadioButton::indicator:unchecked:hover {   /* 未选中时，鼠标悬停时的状态 */
-    background:rgb(0, 0, 0);
-}
- 
-QRadioButton::indicator:unchecked:pressed {   /*未选中时，按钮下按时的状态 */
-    background:rgb(0, 0, 0);
-}
- 
-QRadioButton::indicator::checked {   /* 按钮选中时的状态 */
-    background:rgb(0, 0, 0);
-}
- 
-QRadioButton::indicator:checked:hover {   /* 按钮选中时，鼠标悬停状态 */
-	background:rgb(0, 0, 0);
-}
- 
-QRadioButton::indicator:checked:pressed { /* 按钮选中时，鼠标下按时的状态 */
-    background:rgb(0, 0, 0);
-}</string>
-       </property>
-       <property name="text">
-        <string>项目</string>
-       </property>
-       <property name="checked">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton_2">
-       <property name="styleSheet">
-        <string notr="true">QRadioButton {
-	border:0px;
-    font-size: 30px;
-	text-align:center;
-	spacing: -85px;
-    color: rgb(255, 255, 255);
-}
-QRadioButton::indicator {   /* indicator是一个子组件，这里的width和height分别指定按钮的宽和高 */
-	width: 100px;
-	height: 50px;
-}
-QRadioButton::indicator::unchecked {   /* 未选中时状态，也即正常状态 */
-    background: rgb(80, 80, 80);
-}
- 
-QRadioButton::indicator:unchecked:hover {   /* 未选中时，鼠标悬停时的状态 */
-    background:rgb(0, 0, 0);
-}
- 
-QRadioButton::indicator:unchecked:pressed {   /*未选中时，按钮下按时的状态 */
-    background:rgb(0, 0, 0);
-}
- 
-QRadioButton::indicator::checked {   /* 按钮选中时的状态 */
-    background:rgb(0, 0, 0);
-}
- 
-QRadioButton::indicator:checked:hover {   /* 按钮选中时，鼠标悬停状态 */
-	background:rgb(0, 0, 0);
-}
- 
-QRadioButton::indicator:checked:pressed { /* 按钮选中时，鼠标下按时的状态 */
-    background:rgb(0, 0, 0);
-}</string>
-       </property>
-       <property name="text">
-        <string>引擎</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton_3">
-       <property name="styleSheet">
-        <string notr="true">QRadioButton {
-	border:0px;
-    font-size: 30px;
-	text-align:center;
-	spacing: -85px;
-    color: rgb(255, 255, 255);
-}
-QRadioButton::indicator {   /* indicator是一个子组件，这里的width和height分别指定按钮的宽和高 */
-	width: 100px;
-	height: 50px;
-}
-QRadioButton::indicator::unchecked {   /* 未选中时状态，也即正常状态 */
-    background: rgb(80, 80, 80);
-}
- 
-QRadioButton::indicator:unchecked:hover {   /* 未选中时，鼠标悬停时的状态 */
-    background:rgb(0, 0, 0);
-}
- 
-QRadioButton::indicator:unchecked:pressed {   /*未选中时，按钮下按时的状态 */
-    background:rgb(0, 0, 0);
-}
- 
-QRadioButton::indicator::checked {   /* 按钮选中时的状态 */
-    background:rgb(0, 0, 0);
-}
- 
-QRadioButton::indicator:checked:hover {   /* 按钮选中时，鼠标悬停状态 */
-	background:rgb(0, 0, 0);
-}
- 
-QRadioButton::indicator:checked:pressed { /* 按钮选中时，鼠标下按时的状态 */
-    background:rgb(0, 0, 0);
-}</string>
-       </property>
-       <property name="text">
-        <string>设置</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Tab 1</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Tab 2</string>
+      </attribute>
+     </widget>
+    </widget>
    </widget>
   </widget>
  </widget>
